@@ -1,4 +1,5 @@
 <?php
+
 namespace WPBookStore;
 
 use WP_Error;
@@ -258,12 +259,15 @@ class Actions
         $tableName = $wpdb->prefix . 'books_info';
 
         if ($type === 'update' && !empty($ISBN)) {
-            $response = $wpdb->update(
-                $tableName,
-                ['isbn' => $ISBN],
-                ['post_id' => $postId]
-            );
-            if (!$response) {
+            $existingRow = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$tableName} WHERE post_id = %d", $postId));
+
+            if ($existingRow && $existingRow->isbn !== $ISBN) {
+                $response = $wpdb->update(
+                    $tableName,
+                    ['isbn' => $ISBN],
+                    ['post_id' => $postId]
+                );
+            } elseif (!$existingRow) {
                 $wpdb->insert(
                     $tableName,
                     [
