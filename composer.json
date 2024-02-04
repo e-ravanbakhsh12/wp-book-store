@@ -1,5 +1,5 @@
 {
-    "name": "veronalabs/plugin",
+    "name": "ehsanRavanbakhsh/WPBookStore",
     "description": "Example WordPress Plugin Based on Rabbit Framework!",
     "keywords": [
         "wordpress",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ExamplePlugin\\": "src"
+            "WPBookStore\\": "src/"
         }
     },
     "require": {

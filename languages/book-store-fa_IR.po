@@ -1,0 +1,156 @@
+# Copyright (C) 2017 Grooni.com
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Book Store\n"
+"POT-Creation-Date: 2024-02-04 12:03+0330\n"
+"PO-Revision-Date: 2024-02-04 12:29+0330\n"
+"Last-Translator: Dmitry-Ch <chapliuk@dmitry.by>\n"
+"Language-Team: Sama Group\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html__;__;_e;esc_html_x:1,2c;esc_attr_e;"
+"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2;"
+"esc_html_e\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: book-store.php:89
+msgid "book store"
+msgstr "فروشگاه کتاب"
+
+#: src/Actions.php:71 src/Actions.php:72 src/Actions.php:88
+#: src/Actions.php:94
+msgid "Book"
+msgstr "کتاب"
+
+#: src/Actions.php:73
+msgid "Search Book"
+msgstr "جستجو کتاب"
+
+#: src/Actions.php:74
+msgid "All Book"
+msgstr "همه کتاب ها"
+
+#: src/Actions.php:75
+msgid "Parent Book"
+msgstr "کتاب مادر"
+
+#: src/Actions.php:76 src/Actions.php:82 src/Actions.php:83
+msgid "Add New Book"
+msgstr "افزودن کتاب جدید"
+
+#: src/Actions.php:77
+msgid "No Book Found"
+msgstr "کتابی یافت نشد"
+
+#: src/Actions.php:78
+msgid "Book archives"
+msgstr "بایگانی کتاب"
+
+#: src/Actions.php:79
+msgid "Inset Into Book"
+msgstr "قرار دادن کتاب"
+
+#: src/Actions.php:80
+msgid "Book Link"
+msgstr "لینک کتاب"
+
+#: src/Actions.php:81
+msgid "Edit Book"
+msgstr "ویرایش کتاب"
+
+#: src/Actions.php:84 src/Actions.php:85
+msgid "View Book"
+msgstr "نمایش کتاب"
+
+#: src/Actions.php:86
+msgid "Book Update"
+msgstr "بروزرسانی کتاب"
+
+#: src/Actions.php:87
+msgid "Book Trash"
+msgstr "انتقال به سطل زباله کتاب"
+
+#: src/Actions.php:114
+msgid "publisher"
+msgstr "ناشر"
+
+#: src/Actions.php:115
+msgid "author"
+msgstr "نویسنده"
+
+#: src/Actions.php:155 src/Actions.php:156 src/Actions.php:169
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: src/Actions.php:157
+#, php-format
+msgid "Search %s"
+msgstr "جستجو  %s"
+
+#: src/Actions.php:158
+#, php-format
+msgid "All %s"
+msgstr "همه %s"
+
+#: src/Actions.php:159
+#, php-format
+msgid "Parent %s"
+msgstr "مادر  %s"
+
+#: src/Actions.php:160
+#, php-format
+msgid "No %s"
+msgstr "بدون  %s"
+
+#: src/Actions.php:161
+#, php-format
+msgid "%s Link"
+msgstr "لینک  %s"
+
+#: src/Actions.php:162
+#, php-format
+msgid "Edit %s"
+msgstr "ویرایش  %s"
+
+#: src/Actions.php:163 src/Actions.php:164
+#, php-format
+msgid "View %s"
+msgstr "نمایش  %s"
+
+#: src/Actions.php:165 src/Actions.php:166
+#, php-format
+msgid "Add New %s"
+msgstr "افزودن  %s"
+
+#: src/Actions.php:167
+#, php-format
+msgid "Update %s"
+msgstr "بروزرسانی  %s"
+
+#: src/Actions.php:168
+#, php-format
+msgid "Trash %s"
+msgstr "انتقال به سطل زباله  %s"
+
+#: src/AdminTable.php:51
+msgid "ID"
+msgstr "ID"
+
+#: src/AdminTable.php:52
+msgid "Post ID"
+msgstr "ID کتاب"
+
+#: src/AdminTable.php:53
+msgid "ISBN"
+msgstr "شماره ISBN"

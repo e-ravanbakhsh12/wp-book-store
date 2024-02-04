@@ -1,0 +1,156 @@
+# Copyright (C) 2017 Grooni.com
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Book Store\n"
+"POT-Creation-Date: 2024-02-04 12:27+0330\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Dmitry-Ch <chapliuk@dmitry.by>\n"
+"Language-Team: Sama Group\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html__;__;_e;esc_html_x:1,2c;esc_attr_e;"
+"esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2;"
+"esc_html_e\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: book-store.php:89
+msgid "book store"
+msgstr ""
+
+#: src/Actions.php:92 src/Actions.php:93 src/Actions.php:109
+#: src/Actions.php:115
+msgid "Book"
+msgstr ""
+
+#: src/Actions.php:94
+msgid "Search Book"
+msgstr ""
+
+#: src/Actions.php:95
+msgid "All Book"
+msgstr ""
+
+#: src/Actions.php:96
+msgid "Parent Book"
+msgstr ""
+
+#: src/Actions.php:97 src/Actions.php:103 src/Actions.php:104
+msgid "Add New Book"
+msgstr ""
+
+#: src/Actions.php:98
+msgid "No Book Found"
+msgstr ""
+
+#: src/Actions.php:99
+msgid "Book archives"
+msgstr ""
+
+#: src/Actions.php:100
+msgid "Inset Into Book"
+msgstr ""
+
+#: src/Actions.php:101
+msgid "Book Link"
+msgstr ""
+
+#: src/Actions.php:102
+msgid "Edit Book"
+msgstr ""
+
+#: src/Actions.php:105 src/Actions.php:106
+msgid "View Book"
+msgstr ""
+
+#: src/Actions.php:107
+msgid "Book Update"
+msgstr ""
+
+#: src/Actions.php:108
+msgid "Book Trash"
+msgstr ""
+
+#: src/Actions.php:135
+msgid "publisher"
+msgstr ""
+
+#: src/Actions.php:136
+msgid "author"
+msgstr ""
+
+#: src/Actions.php:189 src/Actions.php:190 src/Actions.php:203
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: src/Actions.php:191
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: src/Actions.php:192
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: src/Actions.php:193
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: src/Actions.php:194
+#, php-format
+msgid "No %s"
+msgstr ""
+
+#: src/Actions.php:195
+#, php-format
+msgid "%s Link"
+msgstr ""
+
+#: src/Actions.php:196
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: src/Actions.php:197 src/Actions.php:198
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: src/Actions.php:199 src/Actions.php:200
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: src/Actions.php:201
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: src/Actions.php:202
+#, php-format
+msgid "Trash %s"
+msgstr ""
+
+#: src/AdminTable.php:67
+msgid "ID"
+msgstr ""
+
+#: src/AdminTable.php:68
+msgid "Post ID"
+msgstr ""
+
+#: src/AdminTable.php:69
+msgid "ISBN"
+msgstr ""

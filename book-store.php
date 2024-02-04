@@ -4,11 +4,11 @@
  * Plugin Name:     Book Store
  * Plugin URI:      https://www.veronalabs.com
  * Plugin Prefix:   WP_BS
- * Description:     Example WordPress Plugin Based on Rabbit Framework!
+ * Description:     Book Store Plugin Based on Rabbit Framework!
  * Author:          Ehsan Ravanbakhsh
- * Author URI:      https://veronalabs.com
+ * Author URI:      https://www.linkedin.com/in/ehsan-ravanbakhsh/
  * Text Domain:     book-store
- * Domain Path:     /languages
+ * Domain Path:     /languages/
  * Version:         1.0
  */
 
@@ -21,21 +21,25 @@ use Rabbit\Redirects\AdminNotice;
 use Rabbit\Templates\TemplatesServiceProvider;
 use Rabbit\Utils\Singleton;
 use League\Container\Container;
+use WPBookStore\Actions;
+
+
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require dirname(__FILE__) . '/vendor/autoload.php';
 }
 
 /**
- * Class ExamplePluginInit
+ * Class WPBookStore
  * @package ExamplePluginInit
  */
-class ExamplePluginInit extends Singleton
+class WPBookStore extends Singleton
 {
     /**
      * @var Container
      */
     private $application;
+    private $actionsInstance;
 
     /**
      * ExamplePluginInit constructor.
@@ -43,6 +47,7 @@ class ExamplePluginInit extends Singleton
     public function __construct()
     {
         $this->application = Application::get()->loadPlugin(__DIR__, __FILE__, 'config');
+        $this->actionsInstance = Actions::getInstance();
         $this->init();
     }
 
@@ -57,15 +62,12 @@ class ExamplePluginInit extends Singleton
             $this->application->addServiceProvider(DatabaseServiceProvider::class);
             $this->application->addServiceProvider(TemplatesServiceProvider::class);
             $this->application->addServiceProvider(LoggerServiceProvider::class);
-            // Load your own service providers here...
-            add_action('admin_menu', array($this, 'addMenu'));
-
-
+           
             /**
              * Activation hooks
              */
             $this->application->onActivation(function () {
-                // Create tables or something else
+                $this->actionsInstance->generateBookTable();
             });
 
             /**
@@ -76,13 +78,18 @@ class ExamplePluginInit extends Singleton
             });
 
             $this->application->boot(function (Plugin $plugin) {
+                // this method not working
                 $plugin->loadPluginTextDomain();
+                // add new textdomain
+                load_plugin_textdomain($this->application->getHeader('text_domain'), false, dirname(plugin_basename(__FILE__)) . $this->application->getHeader( 'domain_path' ));
 
-                // load template
-                $this->application->template('plugin-template.php', ['foo' => 'bar']);
+                global $textDomain;
+                $textDomain = $this->application->getHeader('text_domain');
 
-                ///...
-
+                $this->actionsInstance->addMainAdminMenu(__('book store',$textDomain), 'book-store');
+                $this->actionsInstance->generatePostType();
+                $this->actionsInstance->addMetaBox();
+                $this->actionsInstance->saveMetaBoxData();
             });
         } catch (Exception $e) {
             /**
@@ -110,34 +117,16 @@ class ExamplePluginInit extends Singleton
     {
         return $this->application;
     }
-
-
-    public function addMenu()
-    {
-
-
-        add_menu_page(
-            esc_html__('سیستم تبلیغات', $this->application->getHeader( 'text_domain' )),
-            esc_html__('سیستم تبلیغات', $this->application->getHeader( 'text_domain' )),
-            'manage_options',
-            'book-store',
-            array($this, 'adminConditionMenuContent'),
-        );
-    }
-
-    function adminConditionMenuContent() {
-        echo'ehsan12';
-    }
 }
 
 /**
- * Returns the main instance of ExamplePluginInit.
+ * Returns the main instance of WPBookStore.
  *
- * @return ExamplePluginInit
+ * @return WPBookStore
  */
-function examplePlugin()
+function wpBookStore()
 {
-    return ExamplePluginInit::get();
+    return WPBookStore::get();
 }
 
-examplePlugin();
+wpBookStore();
